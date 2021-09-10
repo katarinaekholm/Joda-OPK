@@ -1,3 +1,190 @@
 Katarina Ekholm, 275510
 
 Tämä on oppimispäiväkirjani kurssille Johdanto datatieteeseen.
+
+Luentoviikko 1: Johdanto aihepiiriin ja suorittaminen
+Ensimmäisen luentoviikon tarkoitus oli johdatella aiheeseen. Katsoin luentovideon ja tutustuin oheismateriaaleihin, koska suoritin kurssin kesällä, jolloin luentoja ei järjestetty, vaan 
+opintojakso perustui vanhoihin luentotallenteisiin. Datatieteessä yhdistyvät liiketoimintaosaaminen, ohjelmointi- ja tietokantaosaaminen, tilastollinen analyysi sekä datalähtöinen viestintä ja visualisointi. 
+Crisp-DM on 90-luvulla kehitetty prosessi kuvaamaan tiedonlouhintaa. Se esittelee avoimen standardin prosessikuvauksen datatieteen prosessista. 
+
+Käytössä on nykyään ennennäkemätön määrä dataa. Sitä voidaan analysoida laskentaympäristössä, joita on karkeasti jaettuna kuusi. Myös käytettävissä olevien työvälineiden määrä on kasvanut. 
+Kiinnostava asia tietojohtamisen näkökulmasta datatiedettä tarkastellessa on se, miten datasta saadaan tuotettua informaatiota, tietämystä ja viisautta.
+
+Koin vaikeaksi keksiä kehitysehdotuksia, koska suoritin kurssia täysin itsenäisesti luentovideoiden ja oheismateriaalien perusteella, minkä vuoksi voin vaan todeta oppimateriaalin olleen hyvä ja riittävä kurssin itsenäiseen suoritukseen.
+Yleisehdotuksena voisin sanoa ns. koodilaskarit, joissa toimintatapa olisi sama kuin matikan laskareissa ja pisteiden kerääminen tapahtuisi sitä kautta. Näissä voitaisiin edistää samalla harjoitustyötä. 
+
+Viikon viisi oivallusta:
+- Datatiede rakentuu neljän kokonaisuuden varaan
+- Myös liiketoimintaosaaminen on yksi datatieteen kokonaisuuksista, joten kyse ei ole vain teknisestä suorittamisesta
+- Datatieteilijän rooli yrityksessä on moninainen
+- Data on datatieteen luonnollinen edellytys
+- Datatiedettä ei voi eriyttää ihmisestä ja organisaatiosta
+
+Koodirivit:
+# importataan kirjastot, joita projektissa voisi hyödyntää
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn import ensemble
+from sklearn import linear_model
+from sklearn.model_selection import GridSearchCV
+from sklearn import preprocessing
+from sklearn.model_selection import train_test_split
+import sklearn.metrics as metrics
+import matplotlib.pyplot as plt
+from collections import Counter
+
+# haetaan oikea CSV tiedosto URL2021-muuttujaan
+URL2021 = 'http://data.insideairbnb.com/spain/catalonia/barcelona/2021-07-07/data/listings.csv.gz'
+# luetaan CSV dataframeen ja puretaan pakkaus
+df2021 = pd.read_csv(URL2021, compression='gzip')
+# haetaan oikea CSV tiedosto URL2020-muuttujaan
+URL2020 = 'http://data.insideairbnb.com/spain/catalonia/barcelona/2020-08-24/data/listings.csv.gz'
+# luetaan CSV dataframeen ja puretaan pakkaus
+df2020 = pd.read_csv(URL2020, compression='gzip')
+
+# tarkastetaan data ja printataan kolumnit näkyviin
+print(df2021.head())
+print(df2021.columns.tolist())
+print(df2020.head())
+print(df2021.columns.tolist())
+
+
+
+Luentoviikko 2: Datan kerääminen ja jalostaminen
+Viikon aiheena oli datan kerääminen ja jalostaminen. Katsoin luennon videotallenteen. 
+Luennolla keskityttiin datatiedeprosessin vaiheisiin, keräämiseen ja jalostamiseen, ryömijöihin ja raapihoihin, API-ohjelmointiin, dataformaatteihin ja niiden ohjelmalliseen käsittelyyn
+sekä data wranglingiin sekä datan esikatseluun Pythonilla.
+
+Datatieteen prosessi jakautuu neljään päävaiheeseen. Ne ovat tiedon esikäsittely, vuoropuhelu analyysin ja tulosten reflektion välillä sekä tulosten viestiminen vastaanottajalle sopivassa muodossa. 
+ETL eli Extract/Load/Transform on datainsinöörien käyttämä prosessi, jossa keskitytään ohjelmistotekniikkaan, tietokantasuunnitteluun ja tietovirran koostamiseen, ja DAD eli Discover/Access/Distill on datatieteen työprosessi, jossa keskitytään datan tuottamaan arvoon.
+Itse tunnistan selvästi olevani enemmän kiinnostunut dataperustaisesta arvonluonnista, kuin teknisestä suorituksesta ja prosessista. On kuitenkin tärkeää ymmärtää prosessia.
+
+Analytiikka voidaan jakaa nelikenttään, jonka koostavat kuvaileva, diagnosoiva, ennakoiva ja ohjaava analytiikka.
+Tuotteistettu analytiikka tapahtuu usein BI-organisaatiossa, ja liittyy siten keskeisesti liiketoimintatiedon hallintaan.
+
+Luentoviikolla keskityttiin myös ryömijöihin ja raapijoihin. Ryömijä on robotti, joka systemaattisesti käy läpi verkko-osoitteita. Tarkoitus on sivujen indeksointi. Ryömijän lähtöpiste on verkkosivun osoite. Ryömijä käy läpi verkkosivuja, ja kasvattaa hakuavaruuttaan lisäämällä verkkosivujen 
+sisältämät hyperlinkit hakujonoon. Ryömijää kontroidaan käskemällä sitä valinnalla, uudelleenkäynnillä, kohteliaisuudella ja rinnakkaistamisella.
+Raapija puolestaan on työkalu, jossa tieto kerätään automatisoidusti verkkosivuilta. Raapijoiden ja ryömijöiden käytössä täytyy kuitenkin käyttää harkintaa ja eettistä ja laillista pohdintaa mm. kilpailuetua tavoitellessa ja tekijänoikeuksien takia (Benbernhardblog, 2017).
+
+Luennolla käsiteltiin myös datan tyyppejä. Tämä alue tuli tarpeeseen myös oman harjoitustyön kohdalla, toisin kuin ryömijät ja raapijat, joiden käyttöä en uskaltanut vähäisen kokemukseni vuoksi kokeilla.
+Tietotyyppejä ovat luvut (kokonaisluvut, floatit), teksti (stringit), boolet (True, False), objektit ja aikatieto.
+Data wrangling tarkoittaa tiedon muuntamista ja mallintamista muotoon, jossa sitä voidaan hyödyntää. Tätä tapahtuu harjoitustyössäkin, joten oli tärkeää perehtyä siihen.
+
+Kehitysehdotuksia:
+-
+
+Viikon viisi oivallusta:
+- Dataprosessin neljä päävaihetta ovat tiedon esikäsittely, vuoropuhelu analyysin ja tulosten reflektion välillä sekä tulosten viestiminen vastaanottajalle
+- Analytiikan nelikenttä muodostuu kuvailevasta, diagnosoivasta, ennakoivasta ja ohjaavasta analytiikasta
+- Datan tietotyypit määrittävät millaista analyysiä niistä voi tehdä
+- Data wranglingia tehdään, kun tietoa muunnetaan ja mallinnetaan muotoon, jossa sitä voidaan hyödyntää
+- Harjoitustyön kannalta tämä oli hyödyllinen viikko
+
+Koodirivit: (Scrapyn dokumentaatiosta)
+scrapy startproject tutorial
+
+Tämän jälkeen luodaan spider kansioon uusi spider.
+
+import scrapy
+
+class QuoteSpider(scrapy.Spider): name = "quotes"
+
+def start_requests(self):
+    urls = [
+        'http://quotes.toscrape.com/page/1/',
+        'http://quotes.toscrape.com/page/2/',
+    ]
+
+    for url in urls:
+        yield scrapy.Request(url=url, callback=self.parse)
+
+def parse(self, response):
+        page = response.url.split("/")[-2]
+        filename = f'quotes-{page}.html'
+        with open(filename, 'wb') as f:
+            f.write(response.body)
+Spider voidaan ajaa scrapy kansion juuresta (siis Tutorial folderista)
+
+Lähteet:
+Benbernardblog (2017). https://benbernardblog.com/web-scraping-and-crawling-are-perfectly-legal-right/
+Scrapy. https://docs.scrapy.org/en/latest/intro/tutorial.html
+
+
+Luentoviikko 3: Koneoppimisen periaatteet
+Koneoppiminen ja tekoäly olivat kolmannen luentoviikon aiheet. Jälleen katsoin luentovideota ja tutustuin oheismateriaaliin. Tämän viikon aihe jännitti minua etukäteen hieman, koska se tuntuu kovin tekniseltä 
+ja oma ymmärrykseni aiheeseen liittyen on melko heikkoa. Opin kuitenkin innolla uutta. 
+
+Tekoälyn kehitys voidaan jakaa kolmeen teknologia-aaltoon, jotka ovat käsin rakennetut toteutukset, tilastollinen oppiminen ja tilanteeseen mukautuva oppiva tekoäly. 
+Workflown keskeiset tavat ovat oKehjattu(Label, algoritmi ennustaa datan perusteella, kunnon speksaaminen on tärkeää) ja ohjaamaton(tavoitteen määrittely, datapaketti mistä oppia) oppiminen. Siinä luodaan koneoppimismalli
+ja syötetyn datan laatu määrittelee tehokkuuden.
+
+Piirteiden erotteleminen ja jalostaminen ovat tärkeitä osia laskennallisessa analytiikassa, koska se perustuu piirteisiin. Automaattisesti piirteitä tunnistavia prosesseja ovat mm. standardointi, kohinan poisto, 
+ulottuvuuksien vähentäminen ja ulottuvuuksien kasvattaminen.  Merkityksellistä on se, mitkä piirteet parantavat algoritmin suorituskykyä ja että algoritmi on ymmärrettävä. Koneoppimisalgoritmin kehitys tehdään optimoimalla tai piirteitä jalostamalla.
+
+
+Viikon oivallukset:
+- Koneoppimisen menetelmät jaetaan ohjaamattomaan ja ohjattuun oppimiseen
+- Datan laadun suuri merkitys
+- Ennustettavien muuttujien tunnistaminen on tärkeää
+- Koneoppimisalgoritmin kehittäminen tapahtuu piirteitä jalostamalla ja algoritmia optimoimalla
+- Tekoälykin kehittyy koko ajan
+
+Koodirivit:
+
+
+
+
+Luentoviikko 4: Harjoitustyöhön tutustuminen
+Katsoin jälleen luennon videolta. Perehdyin luentomateriaaleihin ja oheismateriaaliin. Luentoviikon päätarkoituksena on perehtyä harjoitustyön tekemiseen ja sopivien prosessien valintaan.
+Olin perehtynyt ennen luennon katsomista AirBnB-esimerkkianalyysiin, ja päätin jo siinä vaiheessa toteuttaa harjoitustyön helpoimman kautta valitsemalla dataksi valmiin datasetin AirBnB:n sivuilta,
+jotta data on helposti saatavilla, ja apua analyysiin on tarjolla monesta lähteestä. Lähtökohtana harjoitustyölle on liiketoimintaongelma, eikä data. Omassa harjoitustyössäni liiketoimintaongelma on 
+tarkastella Barcelonan vuokrattavien AirBnB-asuntojen hintoja ja niihin vaikuttavia tekijöitä. Ratkaisu on suunnattu asuntojentarjoajille, jotta he voisivat tehostaa hinnoittelua ja saada mahdollisimman hyvän
+katteen ja käyttöasteen asunnolleen. Myös vuokraajat voivat hyötyä tiedosta hintoihin vaikuttavista tekijöistä.
+
+Harjoitustyö koostuu datan keräämisestä, minkä tein AirBnB:n sivuilta, datan tarkastelusta ja käsittelystä, aineiston rikastamisesta, visualisointien tekemisestä, mallintamisesta ja iteroinnista. 
+
+Viikon viisi oivallusta:
+-
+
+
+Luentoviikko 5: Vierailuluento luonnollisen kielen analyyistä
+Tällä viikolla vuorossa oli Solitan vierailuluento aiheesta NLP. Kyseessä on datatieteen erityisala, jossa datalähteenä on luonnollinen kieli. Se on rakenteetonta, joka asettaa haasteita sen käyttämisessä datalähteenä. 
+Yleisiä käyttökohteita ovat mm. chatbotit, konekäännökset ja tekstin luokittelu. Sen avulla voidaan parantaa muita data/koneoppimisratkaisuja esimerkiksi piirteiden erotuksen avulla.
+
+Mikkonen esitteli luennolla myös Google Colaboratoryn, joka on Googlen ilmainen Notebook-palvelu. Se ei ollut itselleni aiemmin tuttu. Sen avulla on helppo jakaa koodia ja työskennellä yhdessä. 
+Saatavilla on myös laskentatehoa. Esikäsittely on tärkeä vaihe koneoppimisprosesseja. Sen tavoitteena on parantaa opetusdatan laatua, vähentää kohinaa ja muuntaa opetusdataa muotoon, jossa sitä voidaan hyödyntää. Nämä asiat 
+ovat tuttuja jo aiemmilta luentoviikoilta, ja oli havainnollistavaa nähdä niiden rooli osana koneoppimisen prosessia. 
+
+
+
+
+Luentoviikko 6: Ohjaamaton koneoppiminen
+
+
+
+
+
+Luentoviikko 7: Visuaalinen analytiikka
+Luentoviikon teemaan tutustuin oheismateriaalin ja luentovideon avulla. Visualisoinnin kaksi keskeistä sovellusta datatieteen parissa ovat eksploratiivinen analytiikka eli raakadatan tutkiva kartoittaminen, 
+ja kommunikointi eli tulosten ja sen välivaiheiden välittäminen loppukäyttäjälle. Eksploratiivista analytiikkaa on verratty tietojohtamisen DIKW-pyramidiin, jossa tiedon tasot data,
+informaatio, tietämys ja viisaus on esitetty pyramidin muodossa. Tämä oli itselleni varsin havainnollistava esimerkki, sillä tietojohtamisen opiskelijana tämä pyramidi oli ennestään varsin tuttu.
+Eksploratiivisessa analytiikassa datasta kartoitetaan tutkivin keinoin informaatiota, ja sitä kautta tietämystä ja viisautta. 
+
+Fry (2008) on määritellyt seitsemän askelta datan visualisoinnille. Ne ovat hanki, pura, suodata, louhi, kuvaile, jalosta ja vuorovaikuta. Nämä askeleet tulevat esille myös harjoitustyössä. 
+Visualisointi mukailee datatieteen työprosessia. Yleisiä periaatteita visualisoinnille ovat mm. tavoite kuvata aineiston keskeisiä piirteitä, tavoite käyttää mahdollisimman vähän dataa kuvaamaan oleellista asiaa 
+sekä yleisön tunteminen.
+
+Myös visualisoinnin virheitä käsiteltiin luentomateriaalissa. Yksi niistä on huono data. Toinen on väärä visualisaation valinta. Kolmas on sekavuus, eli liikaa värejä tai informaatiota. Väärin esitetty data on neljäs virhe. 
+Viides virhe on epäkonsistentit skaalat, mikä voi vääristää visualisointeja. (Ayalasomayajula, 2017). Virheiden välttämiseksi visualisointien oikea valinta ja suunnitteleminen on avainasemassa. Erilaisia
+visualisointityyppejä ovat esim. aikasarjat, lajitellut luokat, osat kokonaisuutta, erokuvaajat, frekvenssit ja korrelaatiot. Itse valitsin käyttää korrelaatioita, 
+koska halusin tarkastella nimenomaan kahden muuttujan välisiä suhteita eli hintoihin vaikuttavia tekijöitä. 
+
+Kehitysehdotuksia:
+
+Viikon viisi oivallusta:
+
+
+Lähteet:
+Ayalasomayajula, V. (2017). The 5 Common Mistakes That Lead to Bad Data Visualization. Saatavilla: https://www.kdnuggets.com/2017/10/5-common-mistakes-bad-data-visualization.html
