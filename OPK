@@ -296,9 +296,27 @@ Viikon oivallukset:
 - Ryvästäminen tarkoittaa syötteen pisteiden jakamista klustereihin
 - Aihemallinnus on hyvin subjektiivista ja on menetelmä abstraktien aiheiden löytämiseksi dokumenttien kokoelmasta
 
-Koodirivit:
+Koodirivit: (Lainattu luentomateriaalista)
+# Valitaan laskettavien klustereiden määrä. Mikä olisi järkevä klustereiden määrä maksimissaan.
+# Onko 20 liikaa?
+c = range(1, 20)
+# Sovitetaan for-silmukassa KMeans kaikille c:n arvoille
+kmeans = [KMeans(n_clusters=i) for i in c]
+score = [kmeans[i].fit(dfNumNorm).score(dfNumNorm) for i in range(len(kmeans))]
 
+# Valitaan kolme klusteria
+kmeans = KMeans(n_clusters=3)
+kmeans.fit(dfNumNorm)
 
+# Katsotaan miten klusterit jakautuvat aineistossa
+dfNum['cluster'] = kmeans.labels_
+dfNum.head(25)
+
+bars = hv.Bars(dfNum['cluster'].value_counts())
+bars
+
+Lähteet:
+Huhtamäki, J. (2020). Luento 6. Koodirivit. Tampereen yliopisto.
 
 
 Luentoviikko 7: Visuaalinen analytiikka
