@@ -3,15 +3,18 @@ Katarina Ekholm, 275510
 Tämä on oppimispäiväkirjani kurssille Johdanto datatieteeseen.
 
 Luentoviikko 1: Johdanto aihepiiriin ja suorittaminen
-Ensimmäisen luentoviikon tarkoitus oli johdatella aiheeseen. Katsoin luentovideon ja tutustuin oheismateriaaleihin, koska suoritin kurssin kesällä, jolloin luentoja ei järjestetty, vaan 
-opintojakso perustui vanhoihin luentotallenteisiin. Datatieteessä yhdistyvät liiketoimintaosaaminen, ohjelmointi- ja tietokantaosaaminen, tilastollinen analyysi sekä datalähtöinen viestintä ja visualisointi. 
-Crisp-DM on 90-luvulla kehitetty prosessi kuvaamaan tiedonlouhintaa. Se esittelee avoimen standardin prosessikuvauksen datatieteen prosessista. 
+Ensimmäisen luentoviikon tarkoitus oli johdatella aiheeseen. Katsoin luentovideon ja tutustuin oheismateriaaleihin, koska suoritin kurssin kesällä, 
+jolloin luentoja ei järjestetty, vaan opintojakso perustui vanhoihin luentotallenteisiin. Datatieteessä yhdistyvät liiketoimintaosaaminen, ohjelmointi- ja tietokantaosaaminen, 
+tilastollinen analyysi sekä datalähtöinen viestintä ja visualisointi. Crisp-DM on 90-luvulla kehitetty prosessi kuvaamaan tiedonlouhintaa. 
+Se esittelee avoimen standardin prosessikuvauksen datatieteen prosessista. 
 
-Käytössä on nykyään ennennäkemätön määrä dataa. Sitä voidaan analysoida laskentaympäristössä, joita on karkeasti jaettuna kuusi. Myös käytettävissä olevien työvälineiden määrä on kasvanut. 
-Kiinnostava asia tietojohtamisen näkökulmasta datatiedettä tarkastellessa on se, miten datasta saadaan tuotettua informaatiota, tietämystä ja viisautta.
+Käytössä on nykyään ennennäkemätön määrä dataa. Sitä voidaan analysoida laskentaympäristössä, joita on karkeasti jaettuna kuusi. Myös käytettävissä olevien 
+työvälineiden määrä on kasvanut. Kiinnostava asia tietojohtamisen näkökulmasta datatiedettä tarkastellessa on se, miten datasta saadaan tuotettua informaatiota, 
+tietämystä ja viisautta.
 
-Koin vaikeaksi keksiä kehitysehdotuksia, koska suoritin kurssia täysin itsenäisesti luentovideoiden ja oheismateriaalien perusteella, minkä vuoksi voin vaan todeta oppimateriaalin olleen hyvä ja riittävä kurssin itsenäiseen suoritukseen.
-Yleisehdotuksena voisin sanoa ns. koodilaskarit, joissa toimintatapa olisi sama kuin matikan laskareissa ja pisteiden kerääminen tapahtuisi sitä kautta. Näissä voitaisiin edistää samalla harjoitustyötä. 
+Koin vaikeaksi keksiä kehitysehdotuksia, koska suoritin kurssia täysin itsenäisesti luentovideoiden ja oheismateriaalien perusteella, minkä vuoksi voin vaan todeta 
+oppimateriaalin olleen hyvä ja riittävä kurssin itsenäiseen suoritukseen.Yleisehdotuksena voisin sanoa ns. koodilaskarit, joissa toimintatapa olisi sama kuin matikan 
+laskareissa ja pisteiden kerääminen tapahtuisi sitä kautta. Näissä voitaisiin edistää samalla harjoitustyötä. 
 
 Viikon viisi oivallusta:
 - Datatiede rakentuu neljän kokonaisuuden varaan
@@ -51,29 +54,28 @@ print(df2020.head())
 print(df2021.columns.tolist())
 
 
-
 Luentoviikko 2: Datan kerääminen ja jalostaminen
 Viikon aiheena oli datan kerääminen ja jalostaminen. Katsoin luennon videotallenteen. 
-Luennolla keskityttiin datatiedeprosessin vaiheisiin, keräämiseen ja jalostamiseen, ryömijöihin ja raapihoihin, API-ohjelmointiin, dataformaatteihin ja niiden ohjelmalliseen käsittelyyn
-sekä data wranglingiin sekä datan esikatseluun Pythonilla.
+Luennolla keskityttiin datatiedeprosessin vaiheisiin, keräämiseen ja jalostamiseen, ryömijöihin ja raapihoihin, API-ohjelmointiin, dataformaatteihin ja niiden ohjelmalliseen 
+käsittelyyn sekä data wranglingiin sekä datan esikatseluun Pythonilla.
 
-Datatieteen prosessi jakautuu neljään päävaiheeseen. Ne ovat tiedon esikäsittely, vuoropuhelu analyysin ja tulosten reflektion välillä sekä tulosten viestiminen vastaanottajalle sopivassa muodossa. 
-ETL eli Extract/Load/Transform on datainsinöörien käyttämä prosessi, jossa keskitytään ohjelmistotekniikkaan, tietokantasuunnitteluun ja tietovirran koostamiseen, ja DAD eli Discover/Access/Distill on datatieteen työprosessi, jossa keskitytään datan tuottamaan arvoon.
-Itse tunnistan selvästi olevani enemmän kiinnostunut dataperustaisesta arvonluonnista, kuin teknisestä suorituksesta ja prosessista. On kuitenkin tärkeää ymmärtää prosessia.
+Datatieteen prosessi jakautuu neljään päävaiheeseen. Ne ovat tiedon esikäsittely, vuoropuhelu analyysin ja tulosten reflektion välillä sekä tulosten viestiminen 
+vastaanottajalle sopivassa muodossa. ETL eli Extract/Load/Transform on datainsinöörien käyttämä prosessi, jossa keskitytään ohjelmistotekniikkaan, tietokantasuunnitteluun 
+ja tietovirran koostamiseen, ja DAD eli Discover/Access/Distill on datatieteen työprosessi, jossa keskitytään datan tuottamaan arvoon. Itse tunnistan selvästi olevani 
+enemmän kiinnostunut dataperustaisesta arvonluonnista, kuin teknisestä suorituksesta ja prosessista. On kuitenkin tärkeää ymmärtää prosessia.
 
 Analytiikka voidaan jakaa nelikenttään, jonka koostavat kuvaileva, diagnosoiva, ennakoiva ja ohjaava analytiikka.
 Tuotteistettu analytiikka tapahtuu usein BI-organisaatiossa, ja liittyy siten keskeisesti liiketoimintatiedon hallintaan.
 
-Luentoviikolla keskityttiin myös ryömijöihin ja raapijoihin. Ryömijä on robotti, joka systemaattisesti käy läpi verkko-osoitteita. Tarkoitus on sivujen indeksointi. Ryömijän lähtöpiste on verkkosivun osoite. Ryömijä käy läpi verkkosivuja, ja kasvattaa hakuavaruuttaan lisäämällä verkkosivujen 
+Luentoviikolla keskityttiin myös ryömijöihin ja raapijoihin. Ryömijä on robotti, joka systemaattisesti käy läpi verkko-osoitteita. Tarkoitus on sivujen indeksointi. 
+Ryömijän lähtöpiste on verkkosivun osoite. Ryömijä käy läpi verkkosivuja, ja kasvattaa hakuavaruuttaan lisäämällä verkkosivujen 
 sisältämät hyperlinkit hakujonoon. Ryömijää kontroidaan käskemällä sitä valinnalla, uudelleenkäynnillä, kohteliaisuudella ja rinnakkaistamisella.
-Raapija puolestaan on työkalu, jossa tieto kerätään automatisoidusti verkkosivuilta. Raapijoiden ja ryömijöiden käytössä täytyy kuitenkin käyttää harkintaa ja eettistä ja laillista pohdintaa mm. kilpailuetua tavoitellessa ja tekijänoikeuksien takia (Benbernhardblog, 2017).
+Raapija puolestaan on työkalu, jossa tieto kerätään automatisoidusti verkkosivuilta. Raapijoiden ja ryömijöiden käytössä täytyy kuitenkin käyttää harkintaa ja eettistä 
+ja laillista pohdintaa mm. kilpailuetua tavoitellessa ja tekijänoikeuksien takia (Benbernhardblog, 2017).
 
-Luennolla käsiteltiin myös datan tyyppejä. Tämä alue tuli tarpeeseen myös oman harjoitustyön kohdalla, toisin kuin ryömijät ja raapijat, joiden käyttöä en uskaltanut vähäisen kokemukseni vuoksi kokeilla.
-Tietotyyppejä ovat luvut (kokonaisluvut, floatit), teksti (stringit), boolet (True, False), objektit ja aikatieto.
+Luennolla käsiteltiin myös datan tyyppejä. Tämä alue tuli tarpeeseen myös oman harjoitustyön kohdalla, toisin kuin ryömijät ja raapijat, joiden käyttöä en uskaltanut 
+vähäisen kokemukseni vuoksi kokeilla. Tietotyyppejä ovat luvut (kokonaisluvut, floatit), teksti (stringit), boolet (True, False), objektit ja aikatieto.
 Data wrangling tarkoittaa tiedon muuntamista ja mallintamista muotoon, jossa sitä voidaan hyödyntää. Tätä tapahtuu harjoitustyössäkin, joten oli tärkeää perehtyä siihen.
-
-Kehitysehdotuksia:
--
 
 Viikon viisi oivallusta:
 - Dataprosessin neljä päävaihetta ovat tiedon esikäsittely, vuoropuhelu analyysin ja tulosten reflektion välillä sekä tulosten viestiminen vastaanottajalle
@@ -113,15 +115,16 @@ Scrapy. https://docs.scrapy.org/en/latest/intro/tutorial.html
 
 
 Luentoviikko 3: Koneoppimisen periaatteet
-Koneoppiminen ja tekoäly olivat kolmannen luentoviikon aiheet. Jälleen katsoin luentovideota ja tutustuin oheismateriaaliin. Tämän viikon aihe jännitti minua etukäteen hieman, koska se tuntuu kovin tekniseltä 
-ja oma ymmärrykseni aiheeseen liittyen on melko heikkoa. Opin kuitenkin innolla uutta. 
+Koneoppiminen ja tekoäly olivat kolmannen luentoviikon aiheet. Jälleen katsoin luentovideota ja tutustuin oheismateriaaliin. Tämän viikon aihe jännitti minua etukäteen hieman, 
+koska se tuntuu kovin tekniseltä ja oma ymmärrykseni aiheeseen liittyen on melko heikkoa. Opin kuitenkin innolla uutta. 
 
 Tekoälyn kehitys voidaan jakaa kolmeen teknologia-aaltoon, jotka ovat käsin rakennetut toteutukset, tilastollinen oppiminen ja tilanteeseen mukautuva oppiva tekoäly. 
-Workflown keskeiset tavat ovat oKehjattu(Label, algoritmi ennustaa datan perusteella, kunnon speksaaminen on tärkeää) ja ohjaamaton(tavoitteen määrittely, datapaketti mistä oppia) oppiminen. Siinä luodaan koneoppimismalli
-ja syötetyn datan laatu määrittelee tehokkuuden.
+Workflown keskeiset tavat ovat oKehjattu(Label, algoritmi ennustaa datan perusteella, kunnon speksaaminen on tärkeää) ja ohjaamaton(tavoitteen määrittely, datapaketti 
+mistä oppia) oppiminen. Siinä luodaan koneoppimismalli ja syötetyn datan laatu määrittelee tehokkuuden.
 
-Piirteiden erotteleminen ja jalostaminen ovat tärkeitä osia laskennallisessa analytiikassa, koska se perustuu piirteisiin. Automaattisesti piirteitä tunnistavia prosesseja ovat mm. standardointi, kohinan poisto, 
-ulottuvuuksien vähentäminen ja ulottuvuuksien kasvattaminen.  Merkityksellistä on se, mitkä piirteet parantavat algoritmin suorituskykyä ja että algoritmi on ymmärrettävä. Koneoppimisalgoritmin kehitys tehdään optimoimalla tai piirteitä jalostamalla.
+Piirteiden erotteleminen ja jalostaminen ovat tärkeitä osia laskennallisessa analytiikassa, koska se perustuu piirteisiin. Automaattisesti piirteitä tunnistavia prosesseja 
+ovat mm. standardointi, kohinan poisto, ulottuvuuksien vähentäminen ja ulottuvuuksien kasvattaminen.  Merkityksellistä on se, mitkä piirteet parantavat algoritmin suorituskykyä
+ja että algoritmi on ymmärrettävä. Koneoppimisalgoritmin kehitys tehdään optimoimalla tai piirteitä jalostamalla.
 
 
 Viikon oivallukset:
@@ -132,58 +135,218 @@ Viikon oivallukset:
 - Tekoälykin kehittyy koko ajan
 
 Koodirivit:
+# Monimuuttujaregressio
 
+from sklearn.model_selection import train_test_split
+from sklearn.model_selection import GridSearchCV
+
+X_train, X_test, y_train, y_test = train_test_split(BCL_data.drop(['price'], axis = 1), BCL_data.price, test_size = 0.2, random_state = 20)
+
+Classifier = linear_regression.fit(X_train, y_train)
+
+n_est = 300
+
+tuned_parameters = {
+    'n_estimators': [ n_est ],
+    'max_depth': [ 4 ],
+    'learning_rate': [ 0.01 ],
+    'min_samples_split': [ 2 ],
+    'loss': [ 'ls', 'lad' ]
+}
+
+gbr = ensemble.GradientBoostingRegressor()
+clf = GridSearchCV(gbr, cv=3, param_grid = tuned_parameters, scoring = 'neg_median_absolute_error')
+preds = clf.best_estimator_
+
+feature_importance = clf.best_estimator_.feature_importances_
+feature_importance = 100.0 * (feature_importance / feature_importance.max())
+sorted_idx = np.argsort(feature_importance)
+pos = np.arange(sorted_idx.shape[0]) + .5
+pvals = feature_importance[shorted_idx]
+pcols = X_train.columns[sorted_idx]
+plt.figure(figsize = (8,12))
+plt.barh(pos, pvals, align = 'center', color = 'pink')
+plt.yticks(pos, pcols)
+plt.xlabel('Suhteellinen merkitys')
+plt.title('Hintaan eniten vaikuttavat tekijät')
+plt.show()
 
 
 
 Luentoviikko 4: Harjoitustyöhön tutustuminen
-Katsoin jälleen luennon videolta. Perehdyin luentomateriaaleihin ja oheismateriaaliin. Luentoviikon päätarkoituksena on perehtyä harjoitustyön tekemiseen ja sopivien prosessien valintaan.
-Olin perehtynyt ennen luennon katsomista AirBnB-esimerkkianalyysiin, ja päätin jo siinä vaiheessa toteuttaa harjoitustyön helpoimman kautta valitsemalla dataksi valmiin datasetin AirBnB:n sivuilta,
-jotta data on helposti saatavilla, ja apua analyysiin on tarjolla monesta lähteestä. Lähtökohtana harjoitustyölle on liiketoimintaongelma, eikä data. Omassa harjoitustyössäni liiketoimintaongelma on 
-tarkastella Barcelonan vuokrattavien AirBnB-asuntojen hintoja ja niihin vaikuttavia tekijöitä. Ratkaisu on suunnattu asuntojentarjoajille, jotta he voisivat tehostaa hinnoittelua ja saada mahdollisimman hyvän
-katteen ja käyttöasteen asunnolleen. Myös vuokraajat voivat hyötyä tiedosta hintoihin vaikuttavista tekijöistä.
+Katsoin jälleen luennon videolta. Perehdyin luentomateriaaleihin ja oheismateriaaliin. Luentoviikon päätarkoituksena on perehtyä harjoitustyön tekemiseen ja sopivien 
+prosessien valintaan. Olin perehtynyt ennen luennon katsomista AirBnB-esimerkkianalyysiin, ja päätin jo siinä vaiheessa toteuttaa harjoitustyön helpoimman kautta valitsemalla 
+dataksi valmiin datasetin AirBnB:n sivuilta, jotta data on helposti saatavilla, ja apua analyysiin on tarjolla monesta lähteestä. Lähtökohtana harjoitustyölle on 
+liiketoimintaongelma, eikä data. Omassa harjoitustyössäni liiketoimintaongelma on tarkastella Barcelonan vuokrattavien AirBnB-asuntojen hintoja ja niihin vaikuttavia tekijöitä. 
+Ratkaisu on suunnattu asuntojentarjoajille, jotta he voisivat tehostaa hinnoittelua ja saada mahdollisimman hyvän katteen ja käyttöasteen asunnolleen. Myös vuokraajat
+voivat hyötyä tiedosta hintoihin vaikuttavista tekijöistä.
 
-Harjoitustyö koostuu datan keräämisestä, minkä tein AirBnB:n sivuilta, datan tarkastelusta ja käsittelystä, aineiston rikastamisesta, visualisointien tekemisestä, mallintamisesta ja iteroinnista. 
+Harjoitustyö koostuu datan keräämisestä, minkä tein AirBnB:n sivuilta, datan tarkastelusta ja käsittelystä, aineiston rikastamisesta, visualisointien tekemisestä, 
+mallintamisesta ja iteroinnista. 
 
 Viikon viisi oivallusta:
--
+- Datan kerääminen on tärkeä vaihe harjoitustyössä
+- Monesta paikasta löytyy valmiita datapaketteja
+- Tärkeää tunnistaa ongelma
+- Ratkaisun käyttäjäryhmän tunnistaminen myös oleellista
+- Datan tarkastelu ja käsittely sekä rikastaminen tärkeitä vaiheita ennen visualisointia
+
+Koodirivit:
+# Datan siivoamista
+
+# muutetaan joidenkin kenttien NaN-arvot nolliksi
+BCL_data['host_response_time'].fillna(0, inplace=True)
+BCL_data['host_response_rate'].fillna(0, inplace=True)
+
+# tarkastetaan tietotyyppien sisältö tehdyn muutoksen jälkeen
+print(BCL_data.isnull().sum())
+
+# poistetaan rivit, joissa arvo on NaN
+BCL_data = BCL_data[BCL_data.review_scores_rating != 0]
+BCL_data = BCL_data[BCL_data.review_scores_cleanliness != 0]
+BCL_data = BCL_data[BCL_data.review_scores_checkin != 0]
+BCL_data = BCL_data[BCL_data.review_scores_communication != 0]
+BCL_data = BCL_data[BCL_data.review_scores_value != 0]
+BCL_data = BCL_data[BCL_data.reviews_per_month != 0]
+BCL_data = BCL_data[BCL_data.name != 0]
+BCL_data = BCL_data[BCL_data.host_is_superhost != 0]
+BCL_data = BCL_data[BCL_data.host_has_profile_pic != 0]
+BCL_data = BCL_data[BCL_data.host_identity_verified != 0]
+BCL_data = BCL_data[BCL_data.host_since != 0]
+BCL_data = BCL_data.dropna(axis=0)
+
+# tarkastetaan sisältö tehtyjen muutosten jälkeen
+print(BCL_data.isnull().sum())
 
 
 Luentoviikko 5: Vierailuluento luonnollisen kielen analyyistä
-Tällä viikolla vuorossa oli Solitan vierailuluento aiheesta NLP. Kyseessä on datatieteen erityisala, jossa datalähteenä on luonnollinen kieli. Se on rakenteetonta, joka asettaa haasteita sen käyttämisessä datalähteenä. 
-Yleisiä käyttökohteita ovat mm. chatbotit, konekäännökset ja tekstin luokittelu. Sen avulla voidaan parantaa muita data/koneoppimisratkaisuja esimerkiksi piirteiden erotuksen avulla.
+Tällä viikolla vuorossa oli Solitan vierailuluento aiheesta NLP. Kyseessä on datatieteen erityisala, jossa datalähteenä on luonnollinen kieli. Se on rakenteetonta, joka 
+asettaa haasteita sen käyttämisessä datalähteenä. Yleisiä käyttökohteita ovat mm. chatbotit, konekäännökset ja tekstin luokittelu. Sen avulla voidaan parantaa muita 
+data/koneoppimisratkaisuja esimerkiksi piirteiden erotuksen avulla.
 
-Mikkonen esitteli luennolla myös Google Colaboratoryn, joka on Googlen ilmainen Notebook-palvelu. Se ei ollut itselleni aiemmin tuttu. Sen avulla on helppo jakaa koodia ja työskennellä yhdessä. 
-Saatavilla on myös laskentatehoa. Esikäsittely on tärkeä vaihe koneoppimisprosesseja. Sen tavoitteena on parantaa opetusdatan laatua, vähentää kohinaa ja muuntaa opetusdataa muotoon, jossa sitä voidaan hyödyntää. Nämä asiat 
-ovat tuttuja jo aiemmilta luentoviikoilta, ja oli havainnollistavaa nähdä niiden rooli osana koneoppimisen prosessia. 
+Mikkonen esitteli luennolla myös Google Colaboratoryn, joka on Googlen ilmainen Notebook-palvelu. Se ei ollut itselleni aiemmin tuttu. Sen avulla on helppo jakaa koodia 
+ja työskennellä yhdessä. Saatavilla on myös laskentatehoa. Esikäsittely on tärkeä vaihe koneoppimisprosesseja. Sen tavoitteena on parantaa opetusdatan laatua, vähentää kohinaa 
+ja muuntaa opetusdataa muotoon, jossa sitä voidaan hyödyntää. Nämä asiat ovat tuttuja jo aiemmilta luentoviikoilta, ja oli havainnollistavaa nähdä niiden rooli 
+osana koneoppimisen prosessia. 
+
+Luennolla käsiteltiin myös mallin opettamista, mihin voidaan käyttää FastTextiä, joka on NLP-kirjasto. Sen avulla sanoja voidaan käsitellä vektorimuodossa. 
+
+Vierailuluennot tuovat aina lisää mielenkiintoa, sillä ne havainnollistavat opetettavia asioita käytännön ja työelämän näkökulmasta.
+
+Viikon oivallukset:
+- NLP:n datalähteenä on luonnollinen kieli
+- Yleisiä käyttökohteita esim. chatbotit
+- Google Colaboratory on ilmainen Notebook-palvelu
+- Se helpottaa datan ja analyysien jakamista
+- FastTextiä käytetään mallin opettamiseen
+
+Koodirivit: (Lainattu vierailuluennon materiaalista)
+# Mallin opetus:
+#@title Mallin opetusparametrit
+#@markdown Input: Polku opetustiedostoon
+input = "data/train_ft.txt"#@param {type:"string"}
+
+#@markdown label_prefix: Luokan tunnuksen etuliite
+label_prefix = "__label__"#@param {type:"string"}
+
+#@markdown Epoch: Montako kertaa mallin opetus iteroidaan
+epoch = 100#@param {type:"number"}
+
+#@markdown Dim: Miten monta ulottuvuutta mallin opettamat sanavektorit sisältävät
+dim = 3#@param {type:"number"}
+
+#@markdown Word_ngrams: Minkäkokoisia ngrameja ympäröivistä sanoista muodostetaan
+word_ngrams = 2#@param {type:"number"}
+
+#@markdown ws: window size, miten monta ympäröivää sanaa tulkitaan sanan kontekstiksi
+ws= 3#@param {type:"number"}
 
 
+#Mallin opetus tapahtuu komennolla train_supervised ja malli tallennetaan muuttujaan
+ft_classifier = ft.train_supervised(
+                          input = input,
+                          label_prefix = label_prefix,
+                          epoch = epoch, 
+                          dim = dim,
+                          word_ngrams = word_ngrams,
+                          ws = ws
+                          )
+                          
+Lähteet:
+Mikkonen, T. (2020). Vierailuluento. Solita. Tampereen Yliopisto.
 
 
 Luentoviikko 6: Ohjaamaton koneoppiminen
+Luentoviikon aiheena oli ohjaamaton koneoppiminen. Ohjatussa oppimisessa tavoitteena on ennustaa piirre y annetun x:n perusteella. Se ei sovi tilanteeseen, jossa 
+datajoukossa ei ole erikseen määriteltyä ennustettavaa piirrettä. Ohjaamattoman oppimisen menetelmät tulevat tällöin kysymykseen. Ohjaamattoman oppimisen esimerkkejä ovat 
+ostoskori- ja verkostoanalyysit, ryvästäminen sekä aihemallinnus. Rysvästämisessä syötteen pisteet jaetaan klustereihin joiden on tarkoitus olla mahdollisimman kaukana 
+toisistaan. Keskeistä on löytää samanlaisia havaintoja aineistosta. K-means algoritmit ovat esimerkki tästä. KMeans toimii siten, että valitaan klustereiden määrä, 
+valitaan keskipisteet ja lasketaan havaintojen etäisyydet keskipisteestä. Havainnot sijoitetaan lähimmän keskipisteen perusteella. Tunnistettuja ongelmia tässä ovat mm. 
+outlier-havaintojen merkittävä vaikutus tuloksiin sekä aineiston järjestyksen vaikutus lopputulokseen. Klustereiden määrän valintaan ei ole yhtä oikeaa tapaa, vaan 
+erilaisia lähestymistapoja. Yksi niistä on kyynärpääperiaate, jossa lasketaan neliösumma eri määrillä. Kun klustereiden määrä vastaa datapisteiden määrää, menee 
+havaintojen kuvaaja nollaan. 
 
+Luonnollisen kielen analyysistä jatkettiin myös tällä viikolla. Aihemallinnus on menetelmä abstraktien aiheiden löytämiseksi dokumenttien kokoelmasta. 
+Myös aineiston laadun merkitystä korostettiin, ja esiin nousi garbage in, garbage out -periaate. Aihemallinnus on myös todella subjektiivista. 
+
+Viikon oivallukset:
+- Ohjatussa oppimisessa tarkoitus on ennustaa piirre y annetun x:n perusteella
+- Ohjaamaton oppiminen sopii tilanteisiin, joissa datajoukossa ei ole ennustettavaa piirrettä
+- Ostoskori-, verkostoanalyysi, ryvästäminen ja aihemallinnus
+- Ryvästäminen tarkoittaa syötteen pisteiden jakamista klustereihin
+- Aihemallinnus on hyvin subjektiivista ja on menetelmä abstraktien aiheiden löytämiseksi dokumenttien kokoelmasta
+
+Koodirivit:
 
 
 
 
 Luentoviikko 7: Visuaalinen analytiikka
-Luentoviikon teemaan tutustuin oheismateriaalin ja luentovideon avulla. Visualisoinnin kaksi keskeistä sovellusta datatieteen parissa ovat eksploratiivinen analytiikka eli raakadatan tutkiva kartoittaminen, 
-ja kommunikointi eli tulosten ja sen välivaiheiden välittäminen loppukäyttäjälle. Eksploratiivista analytiikkaa on verratty tietojohtamisen DIKW-pyramidiin, jossa tiedon tasot data,
-informaatio, tietämys ja viisaus on esitetty pyramidin muodossa. Tämä oli itselleni varsin havainnollistava esimerkki, sillä tietojohtamisen opiskelijana tämä pyramidi oli ennestään varsin tuttu.
-Eksploratiivisessa analytiikassa datasta kartoitetaan tutkivin keinoin informaatiota, ja sitä kautta tietämystä ja viisautta. 
+Luentoviikon teemaan tutustuin oheismateriaalin ja luentovideon avulla. Visualisoinnin kaksi keskeistä sovellusta datatieteen parissa ovat eksploratiivinen analytiikka 
+eli raakadatan tutkiva kartoittaminen, ja kommunikointi eli tulosten ja sen välivaiheiden välittäminen loppukäyttäjälle. Eksploratiivista analytiikkaa on verratty 
+tietojohtamisen DIKW-pyramidiin, jossa tiedon tasot data, informaatio, tietämys ja viisaus on esitetty pyramidin muodossa. Tämä oli itselleni varsin havainnollistava 
+esimerkki, sillä tietojohtamisen opiskelijana tämä pyramidi oli ennestään varsin tuttu. Eksploratiivisessa analytiikassa datasta kartoitetaan tutkivin keinoin informaatiota, 
+ja sitä kautta tietämystä ja viisautta. 
 
-Fry (2008) on määritellyt seitsemän askelta datan visualisoinnille. Ne ovat hanki, pura, suodata, louhi, kuvaile, jalosta ja vuorovaikuta. Nämä askeleet tulevat esille myös harjoitustyössä. 
-Visualisointi mukailee datatieteen työprosessia. Yleisiä periaatteita visualisoinnille ovat mm. tavoite kuvata aineiston keskeisiä piirteitä, tavoite käyttää mahdollisimman vähän dataa kuvaamaan oleellista asiaa 
-sekä yleisön tunteminen.
+Fry (2008) on määritellyt seitsemän askelta datan visualisoinnille. Ne ovat hanki, pura, suodata, louhi, kuvaile, jalosta ja vuorovaikuta. Nämä askeleet tulevat esille myös 
+harjoitustyössä. Visualisointi mukailee datatieteen työprosessia. Yleisiä periaatteita visualisoinnille ovat mm. tavoite kuvata aineiston keskeisiä piirteitä, tavoite 
+käyttää mahdollisimman vähän dataa kuvaamaan oleellista asiaa sekä yleisön tunteminen.
 
-Myös visualisoinnin virheitä käsiteltiin luentomateriaalissa. Yksi niistä on huono data. Toinen on väärä visualisaation valinta. Kolmas on sekavuus, eli liikaa värejä tai informaatiota. Väärin esitetty data on neljäs virhe. 
-Viides virhe on epäkonsistentit skaalat, mikä voi vääristää visualisointeja. (Ayalasomayajula, 2017). Virheiden välttämiseksi visualisointien oikea valinta ja suunnitteleminen on avainasemassa. Erilaisia
-visualisointityyppejä ovat esim. aikasarjat, lajitellut luokat, osat kokonaisuutta, erokuvaajat, frekvenssit ja korrelaatiot. Itse valitsin käyttää korrelaatioita, 
-koska halusin tarkastella nimenomaan kahden muuttujan välisiä suhteita eli hintoihin vaikuttavia tekijöitä. 
-
-Kehitysehdotuksia:
+Myös visualisoinnin virheitä käsiteltiin luentomateriaalissa. Yksi niistä on huono data. Toinen on väärä visualisaation valinta. Kolmas on sekavuus, eli liikaa värejä tai 
+informaatiota. Väärin esitetty data on neljäs virhe. Viides virhe on epäkonsistentit skaalat, mikä voi vääristää visualisointeja. (Ayalasomayajula, 2017). Virheiden 
+välttämiseksi visualisointien oikea valinta ja suunnitteleminen on avainasemassa. Erilaisia visualisointityyppejä ovat esim. aikasarjat, lajitellut luokat, osat kokonaisuutta, 
+erokuvaajat, frekvenssit ja korrelaatiot. Itse valitsin käyttää korrelaatioita, koska halusin tarkastella nimenomaan kahden muuttujan välisiä suhteita eli 
+hintoihin vaikuttavia tekijöitä. 
 
 Viikon viisi oivallusta:
+- Eksploratiivinen analytiikka ja kommunikointi
+- Datan visualisoinnissa seitsemän askelta (hanki, pura, suodata, louhi, kuvaile, jalosta ja vuorovaikuta)
+- Visualisoinnin virheisiin vaikuttaa moni tekijä
+- Virheitä tulee välttää
+- Eksploratiivinen analytiikka ja Crisp-DM -malli verrattavissa
+
+Koodirivit:
+# Arvostelujen määrän jakautuminen hintojen mukaan
+
+price_review = BCL_data[['number_of_reviews','price']].sort_values(by='price')
+figure = price_review.plot(x='number_of_reviews', y='price', style='*', figsize=(10,10), legend=False, \
+                          title='Arvostelujen määrän jakautuminen hinnan mukaan', fontsize=14)
+
+figure.set_xlabel('Arvostelujen määrä', fontsize = 14)
+figure.set_ylabel('Hinta', fontsize = 14)
+
+# Korrelaatio majoitettavien määrän ja hinnan välillä
+linear_regression = linear_model.LinearRegression()
+x = BCL_data['accommodates'].values[:,np.newaxis]
+y = BCL_data['price']
+
+classifier = linear_regression.fit(x,y)
+
+plt.scatter(x,y, color='pink')
+plt.plot(x, classifier.predict(x), color='green')
+plt.title('Majoitettavien määrän vaikutus hintaan')
+plt.xlabel('Majoitettavien määrä')
+plt.ylabel('Hinta')
 
 
 Lähteet:
